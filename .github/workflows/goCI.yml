@@ -3,7 +3,9 @@ name: CI setup for Go
 on:
   push:
     branches: [main]
-
+  pull_request:
+    branches: [main]
+  
 jobs:
   my-job:
     name: My Job
@@ -52,7 +54,7 @@ jobs:
       run: |
         go get github.com/franela/goblin
         go get github.com/tebeka/go2xunit
-        go test -v
+        # go test -v
         go test -v | go2xunit > report.xml
         ls
         
