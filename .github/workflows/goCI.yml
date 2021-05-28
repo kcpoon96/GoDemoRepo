@@ -33,7 +33,7 @@ jobs:
     - name: Check file system
       run: |
         ls
-        cat calc.go
+        cat calctwo_main.go
         
     - name: Checkout private repo
       uses: actions/checkout@v2
